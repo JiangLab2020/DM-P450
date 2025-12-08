@@ -1,0 +1,34 @@
+[data_path]
+Cache_PATH = "DM_P450_model/data/cache"
+psname_save_file = "DM_P450_model/data/cache/psnames.pt"
+inference_output_path = "DM_P450_model/data/output"
+
+[data_path.Pocket_P450_PATH]
+# file
+finger_file = "DM_P450_model/data/input/P450_Moudle_All_finger.txt"
+graph_save_file = "DM_P450_model/data/cache/graphs_gat.bin"
+info_save_file = "DM_P450_model/data/cache/info_gat.pkl"
+score_save_file = "DM_P450_model/data/cache/scores.pt"
+
+[data_path.Seq_P450_PATH]
+infer_seq_save_file = "DM_P450_model/data/cache/seq.pt"
+infer_substrate_save_file = "DM_P450_model/data/cache/substrate.pt"
+infer_substrate_save_path = "DM_P450_model/data/cache"
+
+[train_config]
+BATCH_SIZE = 128
+EPOCHS = 500
+HIDDEN_DIM = 64
+PROJ_DIM = 256
+INTERACTION_DISTANCE = 4.5 # 相互作用距离阈值 (埃)
+MODEL_SAVE_PATH = "DM_P450_model/data/model/" # 模型保存路径
+NUM_HEADS = 4 # GAT的注意力头数，需要与模型定义一致
+lr = 1e-1
+LOAD_MODEL = "False"
+margin = 1
+alpha = 3
+
+[model_path]
+DM_P450_path = "DM_P450_model/data/model/dm_p450_epoch300.pth"
+Seq_Only_path = "DM_P450_model/data/model/seq_p450_epoch300.pth"
+Pocket_Only_path = "DM_P450_model/data/model/pocket_p450_epoch300.pth"
