@@ -14,7 +14,7 @@ To set up the environment:
 ``` bash
 conda env create -f environment.yml
 ```
-You can download the dataset from **[https://zenodo.org/records/1785586](https://zenodo.org/records/1785586)** and place it in the **P450_docking/P450_db** folder for use in docking.
+You can download the dataset from **[zenodo.org](https://zenodo.org/records/17861420)** and place it in the **P450_docking/P450_db** folder for use in docking.
 
 # Usage
 1. prpare data
