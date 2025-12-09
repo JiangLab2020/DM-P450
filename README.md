@@ -38,6 +38,8 @@ export PYTHONPATH=$PWD:$PYTHONPATH
 Choose the model you want to use from **DM-P450**, **Pocket-P450**, or **Seq-P450**, and provide the corresponding file name as input.
 (You only need to input the file name, not the full path, since the files are already placed in the designated directory and the program will automatically locate them.)
 
+When using the DM and Pocket models, the docking process will be involved. After the docking is complete, a prompt will appear on the interface: Please check the modeling results and input the reaction site residue number in uppercase (e.g., C21). You can find the residue number in the output PDB file located at `./P450_docking/*.pdbqt`. Once the site confirmation is completed, the program will automatically proceed with the deep learning prediction task and output the final results.
+
 ``` bash
 python scripts/infer.py -model DM-P450     -inputFA test.fasta -substrate AGI.sdf | tee logs/infer.log
 
