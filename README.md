@@ -13,6 +13,9 @@ Given the complex interactions between cytochrome P450 enzyme catalytic pockets 
 To set up the environment:
 ``` bash
 conda env create -f environment.yml
+pip install  dgl -f https://data.dgl.ai/wheels/torch-2.4/cu124/repo.html
+pip install boltz[cuda] -U
+
 ```
 You can download the dataset from **[zenodo.org](https://zenodo.org/records/17861420)** and place it in the **P450_docking/P450_db** folder for use in docking.
 
