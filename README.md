@@ -13,6 +13,7 @@ Given the complex interactions between cytochrome P450 enzyme catalytic pockets 
 To set up the environment:
 ``` bash
 conda env create -f environment.yml
+conda activate DMP450
 pip install  dgl -f https://data.dgl.ai/wheels/torch-2.4/cu124/repo.html
 pip install boltz[cuda] -U
 
